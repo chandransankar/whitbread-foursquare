@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/whitbread-test"/>
+    <filter root="/etc/designs/whitbread-test"/>
+    <filter root="/content/whitbread-test"/>
+</workspaceFilter>

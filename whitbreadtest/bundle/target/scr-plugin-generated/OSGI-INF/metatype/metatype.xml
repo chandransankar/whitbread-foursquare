@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/metatype">
+    <OCD id="uk.co.whitbread.test.servlets.FoursquareJsonHandler" name="%uk.co.whitbread.test.servlets.FoursquareJsonHandler.name" description="%uk.co.whitbread.test.servlets.FoursquareJsonHandler.description">
+        <AD id="service.name" type="String" default="Foursquare JSON Handler Servlet" name="%service.name.name" description="%service.name.description"/>
+        <AD id="sling.servlet.paths" type="String" default="/bin/sling/foursquare-json" name="%sling.servlet.paths.name" description="%sling.servlet.paths.description"/>
+    </OCD>
+    <Designate pid="uk.co.whitbread.test.servlets.FoursquareJsonHandler">
+        <Object ocdref="uk.co.whitbread.test.servlets.FoursquareJsonHandler"/>
+    </Designate>
+</metatype:MetaData>

@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1454542931547
+Build-Jdk: 1.8.0_51
+Built-By: sankarchandran
+Bundle-Description: Maven Multimodule project for Whitbread Test.
+Bundle-ManifestVersion: 2
+Bundle-Name: Whitbread Test Bundle
+Bundle-SymbolicName: whitbread-test.whitbreadtest-bundle
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: uk.co.whitbread.test;version="1.0.0",uk.co.whitbread.tes
+ t.servlets;uses:="uk.co.whitbread.test,javax.servlet,org.slf4j,org.apac
+ he.sling.api,org.apache.sling.api.servlets";version="1.0.0.SNAPSHOT"
+Import-Package: javax.servlet,org.apache.commons.httpclient,org.apache.c
+ ommons.httpclient.methods,org.apache.commons.httpclient.params,org.apac
+ he.sling.api;version="[2.1,3)",org.apache.sling.api.request;version="[2
+ .1,3)",org.apache.sling.api.servlets;version="[2.1,3)",org.apache.sling
+ .jcr.api;version="[2.1,3)",org.slf4j;version="[1.5,2)",uk.co.whitbread.
+ test;version="[1.0,2)"
+Service-Component: OSGI-INF/serviceComponents.xml
+Tool: Bnd-1.50.0

@@ -1,0 +1,7 @@
+uk/co/whitbread/test/impl/filters/LoggingFilter.class
+uk/co/whitbread/test/HelloService.class
+uk/co/whitbread/test/package-info.class
+uk/co/whitbread/test/impl/FoursquareServiceImpl.class
+uk/co/whitbread/test/FoursquareService.class
+uk/co/whitbread/test/servlets/FoursquareJsonHandler.class
+uk/co/whitbread/test/impl/HelloServiceImpl.class

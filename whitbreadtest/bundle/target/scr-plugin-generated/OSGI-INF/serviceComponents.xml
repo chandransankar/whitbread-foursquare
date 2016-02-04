@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component enabled="true" immediate="true" name="uk.co.whitbread.test.impl.FoursquareServiceImpl">
+        <implementation class="uk.co.whitbread.test.impl.FoursquareServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="uk.co.whitbread.test.FoursquareService"/>
+        </service>
+        <property name="service.pid" value="uk.co.whitbread.test.impl.FoursquareServiceImpl"/>
+    </scr:component>
+    <scr:component enabled="true" name="uk.co.whitbread.test.impl.HelloServiceImpl">
+        <implementation class="uk.co.whitbread.test.impl.HelloServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="uk.co.whitbread.test.HelloService"/>
+        </service>
+        <property name="service.pid" value="uk.co.whitbread.test.impl.HelloServiceImpl"/>
+        <reference name="repository" interface="org.apache.sling.jcr.api.SlingRepository" cardinality="1..1" policy="static" bind="bindRepository" unbind="unbindRepository"/>
+    </scr:component>
+    <scr:component enabled="true" immediate="true" name="uk.co.whitbread.test.impl.filters.LoggingFilter">
+        <implementation class="uk.co.whitbread.test.impl.filters.LoggingFilter"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Filter"/>
+        </service>
+        <property name="service.ranking" type="Integer" value="-700"/>
+        <property name="sling.filter.scope" value="REQUEST"/>
+        <property name="service.pid" value="uk.co.whitbread.test.impl.filters.LoggingFilter"/>
+    </scr:component>
+    <scr:component enabled="true" immediate="true" name="uk.co.whitbread.test.servlets.FoursquareJsonHandler">
+        <implementation class="uk.co.whitbread.test.servlets.FoursquareJsonHandler"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="service.name" type="String" value="Foursquare JSON Handler Servlet"/>
+        <property name="sling.servlet.paths" type="String" value="/bin/sling/foursquare-json"/>
+        <property name="service.pid" value="uk.co.whitbread.test.servlets.FoursquareJsonHandler"/>
+        <reference name="foursquareService" interface="uk.co.whitbread.test.FoursquareService" cardinality="1..1" policy="static" bind="bindFoursquareService" unbind="unbindFoursquareService"/>
+    </scr:component>
+</components>
