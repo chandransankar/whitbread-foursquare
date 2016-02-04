@@ -4,6 +4,13 @@
         <service servicefactory="false">
             <provide interface="uk.co.whitbread.test.FoursquareService"/>
         </service>
+        <property name="fourSquareUrl" type="String" value="https://api.foursquare.com/v2/venues/search" private="false"/>
+        <property name="clientId" type="String" value="DY504NG55YKJMUHDKJNYQQFLZYEX1LFFEWILQU1DHMN3SUJS" private="false"/>
+        <property name="clientSecret" type="String" value="QDCEEBQYVCCELRXSCXUXTHGTLYBZ2G55O2JD5I0JIWJRJUQR" private="false"/>
+        <property name="clientVersion" type="String" value="20160203" private="false"/>
+        <property name="redirectUrl" type="String" value="http://www.sankar-whitbread-test.com" private="false"/>
+        <property name="authenticationUrl" type="String" value="https://foursquare.com/oauth2/authenticate" private="false"/>
+        <property name="accessTokenUrl" type="String" value="https://foursquare.com/oauth2/access_token" private="false"/>
         <property name="service.pid" value="uk.co.whitbread.test.impl.FoursquareServiceImpl" private="false"/>
     </scr:component>
     <scr:component enabled="true" name="uk.co.whitbread.test.impl.HelloServiceImpl">
