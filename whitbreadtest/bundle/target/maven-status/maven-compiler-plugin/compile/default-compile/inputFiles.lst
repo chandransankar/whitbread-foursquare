@@ -1,7 +1,7 @@
-/Users/sankarchandran/whitbread-test/whitbreadtest/bundle/src/main/java/uk/co/whitbread/test/impl/HelloServiceImpl.java
-/Users/sankarchandran/whitbread-test/whitbreadtest/bundle/src/main/java/uk/co/whitbread/test/impl/filters/LoggingFilter.java
-/Users/sankarchandran/whitbread-test/whitbreadtest/bundle/src/main/java/uk/co/whitbread/test/package-info.java
-/Users/sankarchandran/whitbread-test/whitbreadtest/bundle/src/main/java/uk/co/whitbread/test/HelloService.java
-/Users/sankarchandran/whitbread-test/whitbreadtest/bundle/src/main/java/uk/co/whitbread/test/FoursquareService.java
-/Users/sankarchandran/whitbread-test/whitbreadtest/bundle/src/main/java/uk/co/whitbread/test/impl/FoursquareServiceImpl.java
-/Users/sankarchandran/whitbread-test/whitbreadtest/bundle/src/main/java/uk/co/whitbread/test/servlets/FoursquareJsonHandler.java
+/Users/sankarchandran/whitbread-foursquare/whitbreadtest/bundle/src/main/java/uk/co/whitbread/test/package-info.java
+/Users/sankarchandran/whitbread-foursquare/whitbreadtest/bundle/src/main/java/uk/co/whitbread/test/FoursquareService.java
+/Users/sankarchandran/whitbread-foursquare/whitbreadtest/bundle/src/main/java/uk/co/whitbread/test/impl/HelloServiceImpl.java
+/Users/sankarchandran/whitbread-foursquare/whitbreadtest/bundle/src/main/java/uk/co/whitbread/test/impl/FoursquareServiceImpl.java
+/Users/sankarchandran/whitbread-foursquare/whitbreadtest/bundle/src/main/java/uk/co/whitbread/test/HelloService.java
+/Users/sankarchandran/whitbread-foursquare/whitbreadtest/bundle/src/main/java/uk/co/whitbread/test/impl/filters/LoggingFilter.java
+/Users/sankarchandran/whitbread-foursquare/whitbreadtest/bundle/src/main/java/uk/co/whitbread/test/servlets/FoursquareJsonHandler.java

@@ -3,8 +3,6 @@
          import="javax.jcr.Session" %>
 
 <%@include file="/libs/foundation/global.jsp"%>
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
 <html>
     <head>
@@ -23,14 +21,14 @@
                         <label>Place Name</label>
                     </td>
                     <td>
-                        <input tupe="text" name="placeName" value="" size="50"/>
+                        <input tupe="text" id="placeName" name="placeName" value="" size="50"/>
                     </td>
                     <td>
-                        <input type="button" value="Find" onclick="alert('1111');">
+                        <input type="button" value="Find" onclick="whitbread.test.foursquare.getPopularVenues();">
                     </td>
                 </tr>
-            </table>
-        
+            </table>        
         </form>  
-    </body>
+        <div class="popular-venues"></div>
+    </body>    
 </html>

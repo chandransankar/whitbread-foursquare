@@ -34,30 +34,31 @@ public class FoursquareServiceImpl implements FoursquareService {
 		String json	=	null ;
 		HttpMethod method = null;
 		try {
-			
+			System.out.println("In getPopularVenues ....");
 	    	HttpClient client = new HttpClient();    	
 	    	client.getParams().setParameter(HttpMethodParams.USER_AGENT,"");
 	    	client.getParams().setParameter("client_id", CLIENT_ID);
 	    	client.getParams().setParameter("client_secret", CLIENT_SECRET);
 	    	client.getParams().setParameter("v", CLIENT_VERSION);
 	    	client.getParams().setParameter("near", placeName);
-	    	client.getParams().setContentCharset("UTF-8");
 	    	method = new GetMethod( FOUR_SQUARE_URL );	    		    	
 	    	method.setRequestHeader("Content-Type", "text/json; charset=UTF-8");	    	
-	    	
+	    	System.out.println("executing ....");
     		int statusCode = client.executeMethod( method) ;    		
     		
-    		log.debug("statusCode .... {}" , statusCode);
+    		System.out.println("statusCode .... " + statusCode);
     		
     		if ( statusCode != HttpStatus.SC_OK ) {    			
-    			log.debug("Method failed: {}" , method.getStatusLine());
+    			System.out.println("Method failed: " + method.getStatusLine());
     	    }
     		else {
     			json	=	method.getResponseBodyAsString();
+    			System.out.println(" got json .. ");
+    			System.out.println( json );
     		}
 		}
 		catch( Exception exc ){
-			log.error( "Exception occured in FoursquareServiceImpl --> getPopularVenues {}" , exc.getMessage() );
+			System.out.println( "Exception occured in FoursquareServiceImpl --> getPopularVenues " + exc.getMessage() );
 		}
 		finally {
 			if( method!=null ) method.releaseConnection();

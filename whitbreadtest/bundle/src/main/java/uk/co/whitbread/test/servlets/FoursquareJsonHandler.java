@@ -42,9 +42,13 @@ public class FoursquareJsonHandler extends SlingAllMethodsServlet {
 	FoursquareService	foursquareService;
 
 	@Override
-	protected void doGet( SlingHttpServletRequest request, SlingHttpServletResponse response ) throws ServletException, IOException {		
-		foursquareService.getPopularVenues( request.getParameter(	PLACE_NAME	) );
-	}
-	
+	protected void doGet( SlingHttpServletRequest request, SlingHttpServletResponse response ) throws ServletException, IOException {
+		System.out.println("Calling FoursquareJsonHandler ....");
+		response.setContentType("application/json");
+		response.setCharacterEncoding("utf-8");
+		System.out.println("Calling foursquareService ....");
+		response.getWriter().print( foursquareService.getPopularVenues( request.getParameter(	PLACE_NAME	) ) );		
+		System.out.println("returned json ....");
+	}	
 	
 }
