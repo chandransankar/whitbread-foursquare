@@ -92,6 +92,8 @@ public class FoursquareServiceImpl implements FoursquareService {
 			if(context.getProperties().get( PROP_AUTHENTICATE_URL )!=null){
 				accessTokenUrl = (String) context.getProperties().get(PROP_ACCESS_TOKEN_URL);
 			}
+			
+			getAccessToken ();
 	}
 	
 	/**
