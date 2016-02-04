@@ -56,5 +56,9 @@ to enter the place name to get the popular places near the entered place.
 
 
 
-Note : It works fine with the javascript implementation but not with the java implemention (i have created the sling handler and osgi service to invoke the json) as its throing {"error":"invalid_grant"} and HTTP/1.1 400 Bad Request error. I can fix this issue if you can provide me some more time like an hour or so later tomorrow. Thanks.
+Note : 
 
+1. It works fine with the javascript implementation but not with the java implemention (i have created the sling handler and osgi service to invoke the json) as its throing {"error":"invalid_grant"} and HTTP/1.1 400 Bad Request error. I can fix this issue if you can provide me some more time like an hour or so later tomorrow. Thanks.
+
+2. Tried using FoursquareApi to get the venues but this API throws org.json.JSONException: JSONObject['specials'] is not a JSONArray exception. Its a FoursquareApi library issue so reverted back to 
+javascript implementation. Please refer whitbreadtest/pom.xml and whitbreadtest/bundle/pom.xml
