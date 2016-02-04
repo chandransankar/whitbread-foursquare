@@ -1,10 +1,26 @@
 Whitbread Test
-========
+==============
 
 This a content package project generated using the multimodule-content-package-archetype.
 
-Building
---------
+
+1. AEM component and client libs are under the follwoing paths
+
+    a. /apps/whitbread-test
+    b. /etc/designs/whitbread-test
+
+
+2. Content page is available under 
+
+    /content/whitbread-test
+ 
+3. OSGI services ( Java source code ) are available under 
+
+    /whitbread-foursquare/whitbreadtest/bundle
+
+
+To Build the project 
+--------------------
 
 This project uses Maven for building. Common commands:
 
@@ -25,6 +41,20 @@ Specifying CRX Host/Port
 ------------------------
 
 The CRX host and port can be specified on the command line with:
-mvn -Dcrx.host=otherhost -Dcrx.port=5502 <goals>
+mvn -Dcrx.host=otherhost -Dcrx.port=4502 <goals>
 
+
+( Or )
+
+Install it from GIT 
+-------------------
+
+Please install the following crx content package "/whitbread-foursquare/whitbreadtest/content/target/whitbreadtest-content-1.0-SNAPSHOT.zip" 
+in AEM publish or author using crx package manager and access the following page "http://localhost:4502/content/whitbread-test.html"
+to enter the place name to get the popular places near the entered place.
+
+
+
+
+Note : It works fine with the javascript implementation but not with the java implemention (i have created the sling handler and osgi service to invoke the json) as its throing {"error":"invalid_grant"} and HTTP/1.1 400 Bad Request error. I can fix this issue if you can provide me some more time like an hour or so later tomorrow. Thanks.
 
