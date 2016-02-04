@@ -18,7 +18,7 @@ import uk.co.whitbread.test.FoursquareService;
  * @author sankarchandran
  *
  */
-@Component(immediate = true, label = "Whitbread Foursquare Service")
+@Component(immediate = true, metatype = true, label = "Whitbread Foursquare Service")
 @Service
 @Properties({
     @Property(name = FoursquareServiceImpl.PROP_FOUR_SQUARE_URL, value = FoursquareServiceImpl.PROP_FOUR_SQUARE_URL_DEFAULT ),

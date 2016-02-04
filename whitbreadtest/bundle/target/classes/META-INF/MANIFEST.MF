@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1454557438514
+Bnd-LastModified: 1454575943722
 Build-Jdk: 1.8.0_51
 Built-By: sankarchandran
 Bundle-Description: Maven Multimodule project for Whitbread Test.
@@ -9,7 +9,7 @@ Bundle-SymbolicName: whitbread-test.whitbreadtest-bundle
 Bundle-Version: 1.0.0.SNAPSHOT
 Created-By: Apache Maven Bundle Plugin
 Export-Package: uk.co.whitbread.test;version="1.0.0",uk.co.whitbread.tes
- t.servlets;uses:="javax.servlet,uk.co.whitbread.test,org.slf4j,org.apac
+ t.servlets;uses:="uk.co.whitbread.test,javax.servlet,org.slf4j,org.apac
  he.sling.api,org.apache.sling.api.servlets";version="1.0.0.SNAPSHOT"
 Import-Package: javax.servlet,org.apache.commons.httpclient,org.apache.c
  ommons.httpclient.methods,org.apache.commons.httpclient.params,org.apac

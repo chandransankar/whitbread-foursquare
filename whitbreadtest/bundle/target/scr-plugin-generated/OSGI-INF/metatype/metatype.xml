@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/metatype">
+    <OCD id="uk.co.whitbread.test.impl.FoursquareServiceImpl" name="Whitbread Foursquare Service" description="%uk.co.whitbread.test.impl.FoursquareServiceImpl.description">
+        <AD id="fourSquareUrl" type="String" default="https://api.foursquare.com/v2/venues/search" name="%fourSquareUrl.name" description="%fourSquareUrl.description"/>
+        <AD id="clientId" type="String" default="DY504NG55YKJMUHDKJNYQQFLZYEX1LFFEWILQU1DHMN3SUJS" name="%clientId.name" description="%clientId.description"/>
+        <AD id="clientSecret" type="String" default="QDCEEBQYVCCELRXSCXUXTHGTLYBZ2G55O2JD5I0JIWJRJUQR" name="%clientSecret.name" description="%clientSecret.description"/>
+        <AD id="clientVersion" type="String" default="20160203" name="%clientVersion.name" description="%clientVersion.description"/>
+        <AD id="redirectUrl" type="String" default="http://www.sankar-whitbread-test.com" name="%redirectUrl.name" description="%redirectUrl.description"/>
+        <AD id="authenticationUrl" type="String" default="https://foursquare.com/oauth2/authenticate" name="%authenticationUrl.name" description="%authenticationUrl.description"/>
+        <AD id="accessTokenUrl" type="String" default="https://foursquare.com/oauth2/access_token" name="%accessTokenUrl.name" description="%accessTokenUrl.description"/>
+    </OCD>
     <OCD id="uk.co.whitbread.test.servlets.FoursquareJsonHandler" name="%uk.co.whitbread.test.servlets.FoursquareJsonHandler.name" description="%uk.co.whitbread.test.servlets.FoursquareJsonHandler.description">
         <AD id="service.name" type="String" default="Foursquare JSON Handler Servlet" name="%service.name.name" description="%service.name.description"/>
         <AD id="sling.servlet.paths" type="String" default="/bin/sling/foursquare-json" name="%sling.servlet.paths.name" description="%sling.servlet.paths.description"/>
     </OCD>
+    <Designate pid="uk.co.whitbread.test.impl.FoursquareServiceImpl">
+        <Object ocdref="uk.co.whitbread.test.impl.FoursquareServiceImpl"/>
+    </Designate>
     <Designate pid="uk.co.whitbread.test.servlets.FoursquareJsonHandler">
         <Object ocdref="uk.co.whitbread.test.servlets.FoursquareJsonHandler"/>
     </Designate>
