@@ -64,7 +64,23 @@
 		<groupId>commons-httpclient</groupId>
 		<artifactId>commons-httpclient</artifactId>
 		<version>3.1</version>
-	</dependency>
+	</dependency>	
+	<dependency>
+    <groupId>fi.foyt</groupId>
+    <artifactId>foursquare-api</artifactId>
+    <version>1.0.2</version>
+     <exclusions>
+        <exclusion>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-api-1.0-sdk</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
+<dependency> 
+<groupId>fi.foyt</groupId> 
+<artifactId>foursquare-api-gae</artifactId> 
+<version>0.0.2</version> 
+</dependency>
         
     </dependencies>
 
@@ -92,6 +108,12 @@
                 <configuration>
                     <instructions>
                         <Bundle-SymbolicName>whitbread-test.whitbreadtest-bundle</Bundle-SymbolicName>
+                        <Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>
+                        <Embed-Directory>OSGI-INF/lib</Embed-Directory>
+                        <Embed-Transitive>false</Embed-Transitive>
+                        <Export-Package>twitter4j.*</Export-Package>
+                        <Import-Package>*,com.google.appengine.api.urlfetch;resolution:=optional
+                        </Import-Package>
                     </instructions>
                 </configuration>
             </plugin>

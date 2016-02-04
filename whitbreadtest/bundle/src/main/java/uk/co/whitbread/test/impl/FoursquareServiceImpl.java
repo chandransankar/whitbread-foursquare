@@ -93,7 +93,7 @@ public class FoursquareServiceImpl implements FoursquareService {
 				accessTokenUrl = (String) context.getProperties().get(PROP_ACCESS_TOKEN_URL);
 			}
 			
-			getAccessToken ();
+			// getAccessToken ();
 	}
 	
 	/**
@@ -103,7 +103,7 @@ public class FoursquareServiceImpl implements FoursquareService {
 	private void getAccessToken () {
 		try {			
 			// authenticate the user and get the code
-			log.debug("In getPopularVenues ....");
+			System.out.println("In getPopularVenues ....");
 			
 			HttpClient httpClient = new HttpClient();
 			httpClient.getParams().setParameter("client_id", this.clientId);
@@ -112,11 +112,11 @@ public class FoursquareServiceImpl implements FoursquareService {
 			
 			PostMethod post = new PostMethod( this.authenticationUrl );
 			int statusCode = httpClient.executeMethod(post);
-			log.debug("authenticate statusCode .... {}" , statusCode);
+			System.out.println("authenticate statusCode .... " + statusCode);
 			String code	=	post.getResponseBodyAsString();
 			
 			
-			log.debug("authenticate code .... {}" , code);
+			System.out.println("authenticate code .... " + code);
 			
 			// get the user access token using the authenticated code
 			httpClient = new HttpClient();
@@ -128,9 +128,9 @@ public class FoursquareServiceImpl implements FoursquareService {
 
 			post = new PostMethod( this.accessTokenUrl );
 			statusCode = httpClient.executeMethod(post);
-			log.debug("statusCode .... {}" , statusCode);
+			System.out.println("statusCode .... " + statusCode);
 			this.access_token	=	post.getResponseBodyAsString();		
-			log.debug("accessToken .... {}" , this.access_token);
+			System.out.println("accessToken .... " + this.access_token);
 			
 		} catch(Exception exc ){
 			log.error("Exception occured in FoursquareServiceImpl--> activate {}", exc.getMessage());
@@ -147,18 +147,20 @@ public class FoursquareServiceImpl implements FoursquareService {
 		try {
 			// invoke the api to get the popular locations using the place name		
 	    	HttpClient client = new HttpClient();    	
+	    	client.getParams().setParameter("client_id", this.clientId);
 	    	client.getParams().setParameter("client_secret", this.clientSecret);
-	    	client.getParams().setParameter("oauth_token", this.access_token);
+	    	client.getParams().setParameter("v", this.clientVersion);
+	    	// client.getParams().setParameter("oauth_token", this.access_token);
 	    	client.getParams().setParameter("near", placeName);
 	    	method = new GetMethod( this.fourSquareUrl );	    		    	
 	    	method.setRequestHeader("Content-Type", "text/json; charset=UTF-8");	    	
-	    	log.debug("executing ....");
+	    	System.out.println("executing ....");
     		int statusCode = client.executeMethod( method) ;    		
-    		
-    		log.debug("statusCode .... {}" , statusCode);
+    		System.out.println("placeName .... " + placeName);
+    		System.out.println("statusCode .... " + statusCode);
     		
     		if ( statusCode != HttpStatus.SC_OK ) {    			
-    			log.debug("Method failed: {}" , method.getStatusLine());
+    			System.out.println("Method failed: " + method.getStatusLine());
     	    }
     		else {
     			json	=	method.getResponseBodyAsString();
@@ -167,7 +169,7 @@ public class FoursquareServiceImpl implements FoursquareService {
     		}
 		}
 		catch( Exception exc ){
-			log.debug( "Exception occured in FoursquareServiceImpl --> getPopularVenues {}" , exc.getMessage() );
+			System.out.println( "Exception occured in FoursquareServiceImpl --> getPopularVenues " + exc.getMessage() );
 		}
 		finally {
 			if( method!=null ) method.releaseConnection();

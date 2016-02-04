@@ -110,6 +110,11 @@
             <url>http://repo.adobe.com/nexus/content/groups/public/</url>
             <layout>default</layout>
         </repository>
+       <repository>
+            <id>foursquareapijava</id>
+            <name>Foursquare V2 API for Java Repository</name>
+            <url>http://foursquare-api-java.googlecode.com/svn/repository</url>
+        </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>
